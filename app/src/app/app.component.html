@@ -1,0 +1,19 @@
+<form [formGroup]="formGroup">
+  <my-textbox formControlName="text"
+              [value]="value"
+              [required]="true"
+              (valueChange)="valueChange($event)">
+  </my-textbox>
+</form>
+
+<div>form group valid: {{ formGroup.valid }}</div>
+<div>form group touched: {{ formGroup.touched }}</div>
+<div>form group dirty: {{ formGroup.dirty }}</div>
+<div>form group pristine: {{ formGroup.pristine }}</div>
+<div>form group errors: {{ formGroup.errors }}</div>
+<br />
+<div>form control valid: {{ formGroup.controls['text'].valid }}</div>
+<div>form control touched: {{ formGroup.controls['text'].touched }}</div>
+<div>form control dirty: {{ formGroup.controls['text'].dirty }}</div>
+<div>form control pristine: {{ formGroup.controls['text'].pristine }}</div>
+<div>form control errors: {{ formGroup.controls['text'].errors }}</div>

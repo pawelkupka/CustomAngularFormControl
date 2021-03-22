@@ -1,0 +1,2 @@
+<label *ngIf="label">{{ label }}<span *ngIf="required">*</span></label>
+<input type="text" [value]="value" [required]="required" [disabled]="disabled" (change)="updateValue($event)" />
